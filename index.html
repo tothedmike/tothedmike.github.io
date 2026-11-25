@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小萝扣桨自愈出白_生活方式影像品牌 - 心流与自然的记录者</title>
+<meta name="description" content="小萝扣桨自愈出白，一个以影像记录生活治愈力量的视频品牌，专注自然、心流与自我修复的视觉叙事。">
+<style>
+:root{
+  --bg:#fafaf7;
+  --ink:#1e2420;
+  --ink-soft:#47524a;
+  --accent:#7c9c78;
+  --accent-deep:#4f6b4c;
+  --accent-warm:#d8c9a8;
+  --card:#ffffff;
+  --line:#e2e5dd;
+  --shadow:0 18px 50px -22px rgba(40,60,45,.35);
+  --radius:18px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-weight:700;line-height:1.28;letter-spacing:.01em;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+.eyebrow{
+  font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--accent-deep);font-weight:600;
+}
+.section{padding:96px 0;}
+.section-head{max-width:720px;margin-bottom:52px;}
+.section-head h2{font-size:clamp(1.6rem,3.4vw,2.5rem);margin:14px 0 18px;}
+.section-head p{color:var(--ink-soft);font-size:1.02rem;}
+
+/* ---------- 顶部导航 ---------- */
+header.site{
+  position:sticky;top:0;z-index:60;
+  backdrop-filter:blur(14px);
+  background:rgba(250,250,247,.82);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  max-width:var(--maxw);margin:0 auto;padding:0 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;letter-spacing:.02em;}
+.brand .mark{
+  width:36px;height:36px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,#b9d3b2,#7c9c78 62%,#4f6b4c);
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.6),0 6px 14px -6px rgba(79,107,76,.8);
+  position:relative;flex:none;
+}
+.brand .mark::after{
+  content:"";position:absolute;inset:9px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.78);border-top-color:transparent;
+  transform:rotate(-30deg);
+}
+.nav-links{display:flex;gap:30px;font-size:.94rem;color:var(--ink-soft);font-weight:500;}
+.nav-links a{position:relative;padding:4px 0;transition:color .25s;}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;
+  background:var(--accent);transition:width .3s ease;
+}
+.nav-links a:hover{color:var(--accent-deep);}
+.nav-links a:hover::after{width:100%;}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 22px;border-radius:999px;font-weight:600;font-size:.92rem;
+  background:var(--accent-deep);color:#fff;border:1px solid var(--accent-deep);
+  transition:transform .25s,background .25s,box-shadow .25s;cursor:pointer;
+}
+.btn:hover{background:#3f583d;transform:translateY(-2px);box-shadow:0 14px 26px -14px rgba(63,88,61,.9);}
+.btn.ghost{background:transparent;color:var(--accent-deep);}
+.btn.ghost:hover{background:rgba(124,156,120,.12);}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--ink);cursor:pointer;}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  padding:96px 0 110px;
+  background:
+    radial-gradient(900px 460px at 82% 8%,rgba(186,210,180,.5),transparent 62%),
+    radial-gradient(700px 420px at 6% 88%,rgba(216,201,168,.42),transparent 66%),
+    linear-gradient(180deg,#fafaf7,#f4f6f0);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,6vw,4.2rem);
+  letter-spacing:.02em;
+  margin:18px 0 24px;
+  background:linear-gradient(120deg,#243026 10%,#4f6b4c 60%,#7c9c78);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .lead{font-size:1.12rem;color:var(--ink-soft);max-width:33ch;}
+.hero-actions{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:42px;margin-top:56px;flex-wrap:wrap;}
+.hero-stats .stat b{display:block;font-size:1.9rem;color:var(--accent-deep);letter-spacing:.01em;}
+.hero-stats .stat span{font-size:.85rem;color:var(--ink-soft);letter-spacing:.06em;}
+
+.hero-visual{position:relative;}
+.hero-card{
+  position:relative;border-radius:26px;overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.7);
+  background:#dfe8da;
+}
+.hero-card svg{width:100%;height:auto;display:block;}
+.float-tag{
+  position:absolute;background:rgba(255,255,255,.9);
+  backdrop-filter:blur(8px);border:1px solid var(--line);
+  padding:10px 16px;border-radius:14px;font-size:.82rem;font-weight:600;
+  color:var(--accent-deep);box-shadow:0 12px 30px -16px rgba(40,60,45,.5);
+  animation:bob 6s ease-in-out infinite;
+}
+.float-tag.t1{top:22px;left:-18px;}
+.float-tag.t2{bottom:34px;right:-14px;animation-delay:1.4s;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-9px);}}
+
+/* ---------- 品牌故事 ---------- */
+.about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;}
+.about-illust{
+  border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  box-shadow:var(--shadow);background:#eef3ea;
+}
+.about-copy h2{font-size:clamp(1.6rem,3.4vw,2.4rem);margin:14px 0 20px;}
+.about-copy p{color:var(--ink-soft);margin-bottom:18px;}
+.value-list{display:grid;gap:18px;margin-top:30px;}
+.value-item{display:flex;gap:16px;align-items:flex-start;}
+.value-item .dot{
+  flex:none;width:34px;height:34px;border-radius:50%;
+  background:rgba(124,156,120,.16);color:var(--accent-deep);
+  display:grid;place-items:center;font-weight:700;font-size:.9rem;
+}
+.value-item h4{font-size:1rem;margin-bottom:4px;}
+.value-item p{font-size:.92rem;margin-bottom:0;}
+
+/* ---------- 作品 / 栏目 ---------- */
+.works{background:var(--bg);}
+.work-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+}
+.work-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:0 10px 30px -24px rgba(40,60,45,.5);
+  transition:transform .35s,box-shadow .35s,border-color .35s;
+  display:flex;flex-direction:column;
+}
+.work-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cfd9c8;}
+.work-thumb{position:relative;aspect-ratio:16/10;overflow:hidden;background:#e6ede1;}
+.work-thumb svg{width:100%;height:100%;display:block;transition:transform .5s ease;}
+.work-card:hover .work-thumb svg{transform:scale(1.05);}
+.work-badge{
+  position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);
+  color:var(--accent-deep);font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  padding:5px 11px;border-radius:999px;
+}
+.work-body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column;}
+.work-body h3{font-size:1.08rem;margin-bottom:10px;}
+.work-body p{font-size:.9rem;color:var(--ink-soft);flex:1;}
+.work-meta{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:.8rem;color:#8a948a;letter-spacing:.04em;}
+.work-meta .play{
+  width:30px;height:30px;border-radius:50%;background:rgba(124,156,120,.14);
+  display:grid;place-items:center;color:var(--accent-deep);transition:background .25s,color .25s;
+}
+.work-card:hover .work-meta .play{background:var(--accent-deep);color:#fff;}
+
+/* ---------- 数据带 ---------- */
+.band{
+  background:linear-gradient(120deg,#2d3a2f,#3f583d 62%,#54704f);
+  color:#eef3ea;padding:70px 0;
+}
+.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;text-align:center;}
+.band .num{font-size:clamp(1.7rem,3.6vw,2.6rem);font-weight:700;letter-spacing:.02em;}
+.band .lbl{font-size:.82rem;letter-spacing:.16em;opacity:.78;margin-top:8px;}
+
+/* ---------- 社区 / 活动 ---------- */
+.community{background:#fff;border-top:1px solid var(--line);}
+.community-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;}
+.timeline{position:relative;padding-left:30px;}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--accent),var(--accent-warm));
+}
+.tl-item{position:relative;padding-bottom:34px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{
+  content:"";position:absolute;left:-30px;top:6px;width:16px;height:16px;border-radius:50%;
+  background:#fff;border:3px solid var(--accent);box-shadow:0 0 0 4px rgba(124,156,120,.14);
+}
+.tl-item .date{font-size:.78rem;letter-spacing:.14em;color:var(--accent-deep);font-weight:700;}
+.tl-item h4{font-size:1.04rem;margin:6px 0 6px;}
+.tl-item p{font-size:.9rem;color:var(--ink-soft);}
+.join-card{
+  background:linear-gradient(160deg,#f2f6ee,#e7efe2);
+  border:1px solid var(--line);border-radius:22px;padding:34px;
+  box-shadow:var(--shadow);
+}
+.join-card h3{font-size:1.3rem;margin-bottom:12px;}
+.join-card p{font-size:.93rem;color:var(--ink-soft);margin-bottom:22px;}
+.join-card ul{display:grid;gap:12px;margin-bottom:26px;}
+.join-card li{display:flex;gap:10px;font-size:.9rem;align-items:center;}
+.join-card li::before{content:"✓";color:var(--accent-deep);font-weight:700;}
+
+/* ---------- 团队 ---------- */
+.team{background:var(--bg);}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.member{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 22px;text-align:center;transition:transform .3s,box-shadow .3s;
+}
+.member:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+.avatar{
+  width:74px;height:74px;border-radius:50%;margin:0 auto 16px;
+  display:grid;place-items:center;font-weight:700;font-size:1.3rem;color:#fff;
+  background:radial-gradient(circle at 32% 28%,#a8c4a2,#7c9c78 60%,#4f6b4c);
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.55);
+}
+.member h4{font-size:1rem;margin-bottom:4px;}
+.member .role{font-size:.8rem;color:var(--accent-deep);letter-spacing:.08em;margin-bottom:10px;}
+.member p{font-size:.85rem;color:var(--ink-soft);}
+
+/* ---------- 常见问答 ---------- */
+.faq{background:#fff;border-top:1px solid var(--line);}
+.faq-list{max-width:860px;margin:0 auto;display:grid;gap:14px;}
+.faq-item{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;transition:border-color .25s;}
+.faq-item.open{border-color:#cfd9c8;box-shadow:0 10px 30px -24px rgba(40,60,45,.6);}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:20px 24px;font-size:1rem;font-weight:600;color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-family:inherit;
+}
+.faq-q .ic{transition:transform .3s;color:var(--accent-deep);font-size:1.2rem;flex:none;}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a p{padding:0 24px 22px;color:var(--ink-soft);font-size:.93rem;}
+
+/* ---------- CTA ---------- */
+.cta{
+  background:linear-gradient(130deg,#33402f,#4f6b4c 58%,#6f8c6b);
+  color:#f2f6ee;text-align:center;padding:96px 0;
+}
+.cta h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:18px;}
+.cta p{max-width:580px;margin:0 auto 34px;opacity:.85;}
+.cta .btn{background:#fff;color:var(--accent-deep);border-color:#fff;}
+.cta .btn:hover{background:#eef3ea;}
+
+/* ---------- Footer ---------- */
+footer.site{
+  background:#1c221e;color:#c9d2c7;padding:64px 0 30px;font-size:.9rem;
+}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px;}
+.foot-brand .brand{color:#fff;margin-bottom:16px;}
+.foot-brand p{color:#96a296;font-size:.86rem;max-width:32ch;}
+.foot-col h5{color:#eef3ea;font-size:.92rem;margin-bottom:18px;letter-spacing:.06em;}
+.foot-col ul{display:grid;gap:11px;}
+.foot-col a{color:#96a296;transition:color .25s;}
+.foot-col a:hover{color:#cfe0c8;}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:24px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  color:#7d897d;font-size:.8rem;
+}
+
+/* ---------- 动画 ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:960px){
+  .hero-grid,.about-grid,.community-grid{grid-template-columns:1fr;gap:44px;}
+  .work-grid{grid-template-columns:repeat(2,1fr);}
+  .band-grid{grid-template-columns:repeat(2,1fr);gap:36px;}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:720px){
+  .nav-links{display:none;}
+  .menu-toggle{display:block;}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;
+    background:#fafaf7;border-bottom:1px solid var(--line);padding:18px 28px 26px;gap:18px;
+  }
+  .work-grid,.team-grid{grid-template-columns:1fr;}
+  .section{padding:70px 0;}
+  .hero{padding:64px 0 76px;}
+  .hero-stats{gap:28px;}
+  .foot-grid{grid-template-columns:1fr;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true"></span>
+      小萝扣桨自愈出白
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">品牌故事</a>
+      <a href="#works">作品栏目</a>
+      <a href="#community">社区活动</a>
+      <a href="#team">创作团队</a>
+      <a href="#faq">常见问答</a>
+    </div>
+    <a class="btn ghost" href="#cta">预约合作</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="展开菜单">≡</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">自然 · 心流 · 自愈影像</span>
+        <h1>小萝扣桨自愈出白</h1>
+        <p class="lead">我们以镜头记录水面上每一次划动、每一次呼吸，把治愈的过程剪成可以反复观看的影像，让自愈被看见，让出白成为日常。</p>
+        <div class="hero-actions">
+          <a class="btn" href="#works">观看代表作品</a>
+          <a class="btn ghost" href="#about">了解品牌理念</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>320+</b><span>影像作品</span></div>
+          <div class="stat"><b>48万</b><span>社区成员</span></div>
+          <div class="stat"><b>96场</b><span>线下共修</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <svg viewBox="0 0 640 520" role="img" aria-label="湖面上划桨的治愈画面">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#e9f1e5"/>
+                <stop offset="1" stop-color="#cfe0c8"/>
+              </linearGradient>
+              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#a9c4a4"/>
+                <stop offset="1" stop-color="#6f8c6b"/>
+              </linearGradient>
+              <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#fbf7ea"/>
+                <stop offset="1" stop-color="#e8e0c8" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="640" height="520" fill="url(#sky)"/>
+            <circle cx="470" cy="120" r="110" fill="url(#sun)"/>
+            <circle cx="470" cy="120" r="46" fill="#fbf7ea" opacity=".9"/>
+            <path d="M0 300 Q160 260 320 296 T640 288 V520 H0 Z" fill="url(#water)"/>
+            <path d="M0 340 Q180 312 360 344 T640 336" stroke="#dcead6" stroke-width="2" fill="none" opacity=".7"/>
+            <path d="M0 386 Q180 362 360 392 T640 384" stroke="#dcead6" stroke-width="2" fill="none" opacity=".55"/>
+            <path d="M0 432 Q180 410 360 438 T640 430" stroke="#dcead6" stroke-width="2" fill="none" opacity=".4"/>
+            <!-- 桨板 -->
+            <ellipse cx="300" cy="356" rx="118" ry="16" fill="#3f583d" opacity=".28"/>
+            <path d="M206 350 Q300 372 396 348 Q386 362 300 368 Q216 362 206 350 Z" fill="#c9a96e"/>
+            <path d="M206 350 Q300 366 396 348" stroke="#a9884f" stroke-width="3" fill="none"/>
+            <!-- 人 -->
+            <circle cx="300" cy="272" r="22" fill="#f0e3c8"/>
+            <path d="M282 300 Q300 286 318 300 L326 350 L274 350 Z" fill="#7c9c78"/>
+            <path d="M318 306 L370 262" stroke="#4f6b4c" stroke-width="7" stroke-linecap="round"/>
+            <path d="M370 262 L432 330" stroke="#7c9c78" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="438" cy="336" rx="15" ry="7" fill="#4f6b4c" transform="rotate(28 438 336)"/>
+            <!-- 水花 -->
+            <path d="M420 352 q14 8 28 2" stroke="#f3f8ef" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M150 372 q16 6 30 0" stroke="#f3f8ef" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+            <!-- 远山 -->
+            <path d="M0 300 L90 236 L176 292 L268 246 L360 300 Z" fill="#9cb897" opacity=".55"/>
+            <path d="M280 300 L380 258 L470 300 Z" fill="#8aa985" opacity=".45"/>
+            <!-- 飞鸟 -->
+            <path d="M120 150 q10 -10 20 0 q10 -10 20 0" stroke="#5c7157" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M180 120 q8 -8 16 0 q8 -8 16 0" stroke="#5c7157" stroke-width="2.2" fill="none" stroke-linecap="round" opacity=".8"/>
+          </svg>
+        </div>
+        <div class="float-tag t1">◐ 自愈影像计划</div>
+        <div class="float-tag t2">✧ 本季新增 12 部短片</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事 -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-illust reveal">
+        <svg viewBox="0 0 520 600" role="img" aria-label="品牌理念插图：水面与光合作用">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#eef3ea"/>
+              <stop offset="1" stop-color="#d3e2cc"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#a9c4a4"/>
+              <stop offset="1" stop-color="#5f7d5c"/>
+            </linearGradient>
+          </defs>
+          <rect width="520" height="600" fill="url(#g1)"/>
+          <circle cx="260" cy="230" r="130" fill="#fbf7ea" opacity=".75"/>
+          <path d="M0 340 Q130 300 260 336 T520 328 V600 H0 Z" fill="url(#g2)"/>
+          <path d="M0 400 Q130 372 260 404 T520 398" stroke="#e6f0e0" stroke-width="2" fill="none" opacity=".6"/>
+          <path d="M0 460 Q130 436 260 466 T520 460" stroke="#e6f0e0" stroke-width="2" fill="none" opacity=".45"/>
+          <!-- 桨 -->
+          <rect x="236" y="120" width="16" height="260" rx="8" fill="#c9a96e"/>
+          <ellipse cx="244" cy="386" rx="38" ry="13" fill="#a9884f" transform="rotate(18 244 386)"/>
+          <!-- 叶 -->
+          <path d="M120 200 q46 -34 92 0 q-46 34 -92 0 Z" fill="#7c9c78"/>
+          <path d="M120 200 q46 -34 92 0" stroke="#4f6b4c" stroke-width="2" fill="none"/>
+          <path d="M120 200 q46 34 92 0" stroke="#4f6b4c" stroke-width="2" fill="none" opacity=".7"/>
+          <!-- 波纹环 -->
+          <ellipse cx="260" cy="356" rx="150" ry="26" fill="none" stroke="#f5faf1" stroke-width="3" opacity=".7"/>
+          <ellipse cx="260" cy="356" rx="90" ry="15" fill="none" stroke="#f5faf1" stroke-width="3" opacity=".55"/>
+          <!-- 光点 -->
+          <circle cx="404" cy="140" r="6" fill="#fbf7ea" opacity=".9"/>
+          <circle cx="360" cy="96" r="4" fill="#fbf7ea" opacity=".8"/>
+          <circle cx="430" cy="210" r="3.4" fill="#fbf7ea" opacity=".75"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">关于我们</span>
+        <h2>把「自愈」拍成一种可以被练习的日常</h2>
+        <p>小萝扣桨自愈出白诞生于一次清晨的湖面划桨。那一刻水面安静，桨声规律，呼吸与动作慢慢对齐，身体里积压的疲惫像被一点点带走。我们意识到，自愈并不抽象，它藏在具体的动作与光线里。</p>
+        <p>于是我们成为一支以影像为媒介的内容团队：记录水面上的划桨、林间的徒步、清晨的呼吸练习，也记录普通人在生活缝隙里重新找回自己的瞬间。品牌名中的「出白」，指的就是那种被洗净之后的通透状态——像洗过的白衬衫，也像重新亮起来的心情。</p>
+        <div class="value-list">
+          <div class="value-item">
+            <div class="dot">01</div>
+            <div><h4>真实优先</h4><p>不摆拍、不夸大，用真实的时间与呼吸感呈现治愈的过程。</p></div>
+          </div>
+          <div class="value-item">
+            <div class="dot">02</div>
+            <div><h4>自然为媒</h4><p>以水、风、光、植物作为叙事主角，让自然承担情绪的重量。</p></div>
+          </div>
+          <div class="value-item">
+            <div class="dot">03</div>
+            <div><h4>长期陪伴</h4><p>用稳定的更新节律，做一支可以被长期订阅与回看的陪伴型频道。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品栏目 -->
+  <section class="section works" id="works">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">作品与栏目</span>
+        <h2>六条内容线，记录自愈的六种入口</h2>
+        <p>从湖面到林间，从独处到共修，我们把内容拆成可持续更新的栏目，每周固定更新，形成稳定的观看节奏。</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="湖面桨板的短片封面">
+              <rect width="400" height="250" fill="#dfeede"/>
+              <circle cx="310" cy="66" r="44" fill="#fbf7ea" opacity=".85"/>
+              <path d="M0 150 Q100 124 200 148 T400 142 V250 H0 Z" fill="#8fb08a"/>
+              <path d="M0 186 Q100 164 200 188 T400 182" stroke="#eaf3e4" stroke-width="2" fill="none" opacity=".7"/>
+              <ellipse cx="150" cy="182" rx="74" ry="10" fill="#3f583d" opacity=".3"/>
+              <path d="M86 178 Q150 194 214 176 Q206 188 150 192 Q94 188 86 178 Z" fill="#c9a96e"/>
+              <circle cx="150" cy="140" r="13" fill="#f0e3c8"/>
+              <path d="M138 156 Q150 148 162 156 L168 180 L132 180 Z" fill="#7c9c78"/>
+              <path d="M162 160 L196 130" stroke="#4f6b4c" stroke-width="4" stroke-linecap="round"/>
+              <path d="M196 130 L234 176" stroke="#7c9c78" stroke-width="3.4" stroke-linecap="round"/>
+            </svg>
+            <span class="work-badge">招牌栏目</span>
+          </div>
+          <div class="work-body">
+            <h3>《水面上的十分钟》</h3>
+            <p>固定机位、无解说、无配乐，只留桨声与呼吸。每周一期，把观众放进同一片安静的水面。</p>
+            <div class="work-meta"><span>已更新 68 期</span><span class="play">▷</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="林间徒步短片封面">
+              <rect width="400" height="250" fill="#e7efe2"/>
+              <circle cx="86" cy="60" r="34" fill="#fbf7ea" opacity=".8"/>
+              <path d="M0 210 Q60 140 130 176 T260 150 T400 196 V250 H0 Z" fill="#7c9c78"/>
+              <path d="M40 210 L74 118 L108 210 Z" fill="#4f6b4c"/>
+              <path d="M120 214 L160 108 L200 214 Z" fill="#5f7d5c"/>
+              <path d="M210 210 L250 128 L290 210 Z" fill="#4f6b4c"/>
+              <path d="M300 214 L338 132 L376 214 Z" fill="#5f7d5c"/>
+              <path d="M0 224 Q100 208 200 220 T400 216" stroke="#cfe0c8" stroke-width="2" fill="none" opacity=".8"/>
+            </svg>
+            <span class="work-badge">户外纪录</span>
+          </div>
+          <div class="work-body">
+            <h3>《走路的办法》</h3>
+            <p>一条路，一段独白。受访者带着自己的故事走进森林，在行走中把卡住的事情慢慢说开。</p>
+            <div class="work-meta"><span>已更新 42 期</span><span class="play">▷</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="呼吸练习短片封面">
+              <rect width="400" height="250" fill="#eef3ea"/>
+              <circle cx="200" cy="125" r="86" fill="none" stroke="#a9c4a4" stroke-width="2" opacity=".7"/>
+              <circle cx="200" cy="125" r="62" fill="none" stroke="#8fb08a" stroke-width="2" opacity=".8"/>
+              <circle cx="200" cy="125" r="38" fill="#cfe0c8" opacity=".9"/>
+              <circle cx="200" cy="125" r="14" fill="#4f6b4c"/>
+              <path d="M60 200 q20 -16 40 0 q20 -16 40 0" stroke="#7c9c78" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M240 206 q20 -16 40 0 q20 -16 40 0" stroke="#7c9c78" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+            </svg>
+            <span class="work-badge">正念练习</span>
+          </div>
+          <div class="work-body">
+            <h3>《四拍呼吸》</h3>
+            <p>跟随画面节奏吸气、停留、呼气、停住。每集三分钟，适合工作间隙与睡前观看。</p>
+            <div class="work-meta"><span>已更新 36 期</span><span class="play">▷</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="人物访谈短片封面">
+              <rect width="400" height="250" fill="#e6ede1"/>
+              <circle cx="200" cy="120" r="62" fill="#f0e3c8"/>
+              <circle cx="200" cy="98" r="30" fill="#f6ecd6"/>
+              <path d="M138 210 Q200 150 262 210 Z" fill="#7c9c78"/>
+              <path d="M60 76 q14 -14 28 0" stroke="#7c9c78" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M312 88 q14 -14 28 0" stroke="#7c9c78" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+              <circle cx="200" cy="120" r="86" fill="none" stroke="#cfe0c8" stroke-width="2" opacity=".8"/>
+            </svg>
+            <span class="work-badge">人物访谈</span>
+          </div>
+          <div class="work-body">
+            <h3>《出白的人》</h3>
+            <p>每期一位普通人，聊他们如何从疲惫里走出来。没有成功学，只有具体做过的事。</p>
+            <div class="work-meta"><span>已更新 28 期</span><span class="play">▷</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="季节影像封面">
+              <rect width="400" height="250" fill="#f2f6ee"/>
+              <path d="M0 190 Q100 150 200 178 T400 168 V250 H0 Z" fill="#a9c4a4"/>
+              <path d="M0 212 Q100 186 200 208 T400 202" stroke="#eef3ea" stroke-width="2" fill="none" opacity=".8"/>
+              <circle cx="70" cy="64" r="26" fill="#fbf7ea" opacity=".9"/>
+              <path d="M300 60 q30 -28 60 0 q-30 28 -60 0 Z" fill="#7c9c78"/>
+              <path d="M300 60 q30 -28 60 0" stroke="#4f6b4c" stroke-width="2" fill="none"/>
+              <circle cx="320" cy="170" r="5" fill="#fbf7ea"/>
+              <circle cx="352" cy="146" r="4" fill="#fbf7ea"/>
+              <circle cx="272" cy="150" r="3.6" fill="#fbf7ea"/>
+            </svg>
+            <span class="work-badge">季节企划</span>
+          </div>
+          <div class="work-body">
+            <h3>《二十四节气的白》</h3>
+            <p>跟随节气流转拍摄自然细节，用一年时间完成一部关于时间与修复的长片计划。</p>
+            <div class="work-meta"><span>更新中 · 第 3 年</span><span class="play">▷</span></div>
+          </div>
+        </article>
+
+        <article class="work-card reveal">
+          <div class="work-thumb">
+            <svg viewBox="0 0 400 250" role="img" aria-label="幕后花絮封面">
+              <rect width="400" height="250" fill="#e2ebdd"/>
+              <rect x="60" y="70" width="120" height="90" rx="10" fill="#4f6b4c"/>
+              <circle cx="120" cy="115" r="26" fill="#a9c4a4"/>
+              <rect x="196" y="96" width="150" height="76" rx="10" fill="#7c9c78"/>
+              <path d="M196 134 h150" stroke="#e2ebdd" stroke-width="3" opacity=".8"/>
+              <circle cx="230" cy="115" r="8" fill="#fbf7ea"/>
+              <circle cx="310" cy="115" r="8" fill="#fbf7ea"/>
+              <path d="M60 200 q30 -14 60 0 q30 -14 60 0 q30 -14 60 0 q30 -14 60 0" stroke="#8fb08a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span class="work-badge">幕后</span>
+          </div>
+          <div class="work-body">
+            <h3>《我们怎么拍》</h3>
+            <p>公开拍摄与剪辑流程，包括设备、机位、调色与配乐选择，供同好交流与学习。</p>
+            <div class="work-meta"><span>已更新 21 期</span><span class="play">▷</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据带 -->
+  <section class="band">
+    <div class="wrap band-grid">
+      <div><div class="num">320+</div><div class="lbl">原创影像作品</div></div>
+      <div><div class="num">48万</div><div class="lbl">全平台关注</div></div>
+      <div><div class="num">96场</div><div class="lbl">线下共修活动</div></div>
+      <div><div class="num">7年</div><div class="lbl">持续稳定更新</div></div>
+    </div>
+  </section>
+
+  <!-- 社区活动 -->
+  <section class="section community" id="community">
+    <div class="wrap community-grid">
+      <div class="reveal">
+        <div class="section-head" style="margin-bottom:36px;">
+          <span class="eyebrow">社区与活动</span>
+          <h2>线上观看，线下一起做</h2>
+          <p>我们相信自愈不是看完一个视频就完成的事。社区会把屏幕里的动作搬到真实生活中，用共修和同行把习惯留下来。</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="date">每月第一个周六</div>
+            <h4>清晨湖面共修</h4>
+            <p>在合作水域进行两小时划桨练习，含热身、呼吸与静水滑行，新人可预约体验位。</p>
+          </div>
+          <div class="tl-item">
+            <div class="date">每两周一次</div>
+            <h4>线上观影与映后谈</h4>
+            <p>社区同步观看新片，主创在线回答问题，并开放成员分享自己的练习记录。</p>
+          </div>
+          <div class="tl-item">
+            <div class="date">每季度</div>
+            <h4>自然影像工作坊</h4>
+            <p>两天一夜的林间拍摄营，从取景、收音到剪辑，完成一支属于自己的三分钟短片。</p>
+          </div>
+          <div class="tl-item">
+            <div class="date">每年秋分</div>
+            <h4>出白计划年度展映</h4>
+            <p>集中放映社区成员一年内完成的作品，并邀请纪录片导演与自然教育者参与对谈。</p>
+          </div>
+        </div>
+      </div>
+      <aside class="join-card reveal">
+        <h3>加入自愈社区</h3>
+        <p>这里没有打卡压力，也不比较进度。你只需要带着一点好奇，和我们一起把注意力放回身体和自然。</p>
+        <ul>
+          <li>每周新片优先观看与幕后花絮</li>
+          <li>线下共修活动优先报名通道</li>
+          <li>每月一份自愈练习手册（PDF）</li>
+          <li>成员作品获得官方展映推荐</li>
+        </ul>
+        <a class="btn" href="#cta">申请加入社区</a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 团队 -->
+  <section class="section team" id="team">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">创作团队</span>
+        <h2>一支小团队，长期做一件事</h2>
+        <p>导演、摄影、剪辑、自然教育者与社区运营，各自负责自己最擅长的部分，共同维护内容的质量与节奏。</p>
+      </div>
+      <div class="team-grid">
+        <div class="member reveal">
+          <div class="avatar">林</div>
+          <h4>林见川</h4>
+          <div class="role">联合创始人 / 导演</div>
+          <p>纪录片出身，负责品牌影像的整体叙事与拍摄方向。</p>
+        </div>
+        <div class="member reveal">
+          <div class="avatar">周</div>
+          <h4>周屿</h4>
+          <div class="role">摄影指导</div>
+          <p>专注自然光与水面摄影，擅长把安静拍得有层次。</p>
+        </div>
+        <div class="member reveal">
+          <div class="avatar">苏</div>
+          <h4>苏白</h4>
+          <div class="role">剪辑与调色</div>
+          <p>负责影片节奏与色彩，让画面接近记忆中的温度。</p>
+        </div>
+        <div class="member reveal">
+          <div class="avatar">陈</div>
+          <h4>陈禾</h4>
+          <div class="role">社区主理人</div>
+          <p>自然教育背景，负责线下共修与社区成员的日常陪伴。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="section-head reveal" style="text-align:center;margin-left:auto;margin-right:auto;">
+        <span class="eyebrow">常见问答</span>
+        <h2>你可能想知道的事</h2>
+        <p>关于内容、社区与合作，这里集中回答最常见的问题。若仍有疑问，欢迎通过页面底部联系我们。</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">「小萝扣桨自愈出白」这个名字是什么意思？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>它由几个具体的意象组成：水上划桨的动作、自愈的过程，以及被洗净后的通透状态。我们用它提醒自己，治愈来自具体的行动，而不是抽象的口号。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">内容更新频率是怎样的？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>招牌栏目每周更新一期，人物访谈与幕后栏目每两周一期，季节企划按节气推进。所有更新会在社区内提前预告。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">线下活动需要会划桨吗？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>不需要。共修活动会分新人组与进阶组，新人组有教练全程陪同，先学习安全知识与基础动作，再进入水面练习。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">可以合作拍摄或转载内容吗？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>欢迎品牌、机构与自然教育组织洽谈合作。我们接受定制拍摄、联合企划与线下活动共建，转载需提前获得书面授权。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">社区需要付费吗？<span class="ic">＋</span></button>
+          <div class="faq-a"><p>线上观看与基础社区内容免费。部分线下共修与工作坊因场地与教练成本收取费用，成员可享优先报名与折扣。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="wrap">
+      <h2>下一次划桨，和我们一起</h2>
+      <p>留下你的联系方式，我们会发送最近一期共修的时间与地点，也会附上一份适合新手的自愈练习清单。</p>
+      <a class="btn" href="mailto:hello@xiaoluo-studio.cn">预约体验 / 洽谈合作</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><span class="mark" aria-hidden="true"></span>小萝扣桨自愈出白</div>
+        <p>以影像记录自愈的过程，让自然的节奏重新回到日常。一个长期更新的生活方式影像品牌。</p>
+      </div>
+      <div class="foot-col">
+        <h5>内容</h5>
+        <ul>
+          <li><a href="#works">作品栏目</a></li>
+          <li><a href="#community">社区活动</a></li>
+          <li><a href="#team">创作团队</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>关于</h5>
+        <ul>
+          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#faq">常见问答</a></li>
+          <li><a href="#cta">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>联络</h5>
+        <ul>
+          <li><a href="mailto:hello@xiaoluo-studio.cn">hello@xiaoluo-studio.cn</a></li>
+          <li><a href="#cta">商务合作</a></li>
+          <li><a href="#cta">媒体咨询</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 小萝扣桨自愈出白 · 保留所有权利</span>
+      <span>影像即练习 · 自愈在当下</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 移动端菜单
+  var toggle = document.getElementById('menuToggle');
+  var links = document.getElementById('navLinks');
+  if(toggle && links){
+    toggle.addEventListener('click', function(){
+      links.classList.toggle('open');
+    });
+    links.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){ links.classList.remove('open'); }
+    });
+  }
+
+  // FAQ 手风琴
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var panel = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      items.forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // 滚动渐显
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // 导航平滑滚动补偿吸顶高度
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if(id === '#' || id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+      window.scrollTo({top: top, behavior:'smooth'});
+    });
+  });
+})();
+</script>
+</body>
+  </html>
